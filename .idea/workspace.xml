@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="407">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -128,12 +128,20 @@
       <option name="presentableId" value="Default" />
       <updated>1566381901908</updated>
       <workItem from="1566381903430" duration="2145000" />
-      <workItem from="1566402353863" duration="10218000" />
+      <workItem from="1566402353863" duration="10475000" />
     </task>
+    <task id="LOCAL-00001" summary="&amp;&amp; implementation">
+      <created>1566422977974</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566422977974</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12363000" />
+    <option name="totallyTimeSpent" value="12620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -164,6 +172,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&amp;&amp; implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="&amp;&amp; implementation" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -182,7 +194,7 @@
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
