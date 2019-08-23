@@ -13,6 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0e1674a9-a00f-4f0a-becd-48a547d291bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/os_lab.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/os_lab.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/os_lab" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/os_lab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -36,10 +38,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="424">
+              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
+                <element signature="e#116#136#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,6 +53,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>^C</find>
+      <find>exec_</find>
+      <find>prompt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,6 +98,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
@@ -108,10 +114,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="os_lab" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="os_lab" TARGET_NAME="os_lab" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="os_lab" RUN_TARGET_NAME="os_lab">
-      <envs>
-        <env name="TERM" value="xterm-256color" />
-      </envs>
+    <configuration name="os_lab" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="os_lab" TARGET_NAME="os_lab" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="os_lab" RUN_TARGET_NAME="os_lab">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -128,7 +131,9 @@
       <option name="presentableId" value="Default" />
       <updated>1566381901908</updated>
       <workItem from="1566381903430" duration="2145000" />
-      <workItem from="1566402353863" duration="10475000" />
+      <workItem from="1566402353863" duration="11221000" />
+      <workItem from="1566471829827" duration="8455000" />
+      <workItem from="1566554572098" duration="2286000" />
     </task>
     <task id="LOCAL-00001" summary="&amp;&amp; implementation">
       <created>1566422977974</created>
@@ -137,17 +142,24 @@
       <option name="project" value="LOCAL" />
       <updated>1566422977974</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&amp;&amp; implementation">
+      <created>1566423002602</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566423002602</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12620000" />
+    <option name="totallyTimeSpent" value="24107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -159,8 +171,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.330076" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4994664" visible="true" weight="0.330076" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053364" side_tool="true" weight="0.330076" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -176,27 +188,24 @@
     <MESSAGE value="&amp;&amp; implementation" />
     <option name="LAST_COMMIT_MESSAGE" value="&amp;&amp; implementation" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
+    <entry file="file:///usr/include/string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="438" column="13" selection-start-line="438" selection-start-column="13" selection-end-line="438" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="424">
+          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#116#136#0" expanded="true" />
           </folding>
         </state>
       </provider>
