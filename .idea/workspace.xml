@@ -13,8 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e1674a9-a00f-4f0a-becd-48a547d291bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/os_lab.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/os_lab.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/os_lab" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/os_lab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -38,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+            <state relative-caret-position="-236">
+              <caret line="200" column="25" lean-forward="true" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="25" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
                 <element signature="e#116#136#0" expanded="true" />
@@ -55,6 +53,8 @@
       <find>^C</find>
       <find>exec_</find>
       <find>prompt</find>
+      <find>In Gr</find>
+      <find>_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,7 +133,7 @@
       <workItem from="1566381903430" duration="2145000" />
       <workItem from="1566402353863" duration="11221000" />
       <workItem from="1566471829827" duration="8455000" />
-      <workItem from="1566554572098" duration="2286000" />
+      <workItem from="1566554572098" duration="5403000" />
     </task>
     <task id="LOCAL-00001" summary="&amp;&amp; implementation">
       <created>1566422977974</created>
@@ -149,15 +149,28 @@
       <option name="project" value="LOCAL" />
       <updated>1566423002602</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="full implementation">
+      <created>1566556901944</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566556901944</updated>
+    </task>
+    <task id="LOCAL-00004" summary="foo">
+      <created>1566557758860</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566557758860</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24107000" />
+    <option name="totallyTimeSpent" value="27224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -186,7 +199,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&amp;&amp; implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="&amp;&amp; implementation" />
+    <MESSAGE value="full implementation" />
+    <MESSAGE value="foo" />
+    <option name="LAST_COMMIT_MESSAGE" value="foo" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/include/string.h">
@@ -201,8 +216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+        <state relative-caret-position="-236">
+          <caret line="200" column="25" lean-forward="true" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="25" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
             <element signature="e#116#136#0" expanded="true" />

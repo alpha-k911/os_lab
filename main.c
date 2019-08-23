@@ -29,6 +29,8 @@ void prompt_(){
 }
 
 int cd(char *cmd){
+
+//    printf("for cd in chdir \n");
     int p = chdir(cmd);
     return p;
 }
@@ -41,6 +43,7 @@ void exec_(char* cmd_args[]){
         signal(SIGINT,SIG_DFL);
         signal(SIGTSTP,SIG_DFL);
         if(strcmp(cmd_args[0],"cd") == 0){
+//            printf("for cd in exec_ \n");
             if(cd(cmd_args[1]) < 0){
                 printf("Shell: Incorrect command\n");
             }
@@ -83,7 +86,7 @@ void split_space(char *inp, char** cmd_args){
     int i = 0;
     cmd_args[i] = strtok(inp," ");
     while(cmd_args[i] != NULL){
-        printf("word:%s\n", cmd_args[i]);
+//        printf("word:%s\n", cmd_args[i]);
         i++;
         cmd_args[i] = strtok(NULL," ");
     }
@@ -130,36 +133,6 @@ int great(char *inp){
     ret = strstr(inp,r);
     return ret != NULL;
 }
-void foo(char *inp, char** cmd_args){
-    pid_t pd = fork();
-    if(pd < 0){
-        printf("Cant fork...\n");
-    }else if(pd == 0){
-        char *found = NULL;
-        int i = 0;
-        status = 0;
-        char* new_inp;
-        cmd_args[0] = NULL;
-        char** cmd_args_ptr[10];
-        for(i = 0; i < 10; i++){
-            cmd_args_ptr[i] = (char**)malloc(sizeof(char*));
-        }
-        i = 0;
-        found = strsep(&inp,"^^");
-        printf("cmd_: %s\n",found);
-        cmd_args_ptr[i][0] = NULL;
-        do {
-            new_inp = found;
-            split_space(new_inp,cmd_args_ptr[i]);
-            exec__(cmd_args_ptr[i]);
-            i++;
-        }while((found = strsep(&inp,"^^")) != NULL);
-
-        exit(0);
-    }else{
-        wait(NULL);
-    }
-}
 void execute(char *inp, char** cmd_args){
 //    printf("En\n");
     char *found = NULL;
@@ -173,10 +146,22 @@ void execute(char *inp, char** cmd_args){
     }
     i = 0;
     if((triple(inp)) == 1){
-        foo(inp,cmd_args);
+        found = strsep(&inp,"^^");
+//        printf("cmd_: %s\n",found);
+        cmd_args_ptr[i][0] = NULL;
+        do {
+            new_inp = found;
+            split_space(new_inp,cmd_args_ptr[i]);
+            exec__(cmd_args_ptr[i]);
+            i++;
+        }while((found = strsep(&inp,"^^")) != NULL);
+        int status,id;
+        while((id = waitpid(-1,&status,0)) != -1){
+            printf("done with %d\n",id);
+        }
     }else if(doubl(inp) == 1){
 //    if((found = strsep(&inp," && ")) != NULL){
-        printf("in&&\n");
+//        printf("in&&\n");
         found = strsep(&inp,"&&");
         do {
             status = 0;
@@ -187,13 +172,13 @@ void execute(char *inp, char** cmd_args){
 //        if(status == 1)
         }while((found = strsep(&inp,"&&")) != NULL);
     }else if(less(inp)){
-        printf("In Less\n");
+//        printf("In Less\n");
         char* f;
         int std_copy = dup(0);
         f = split_less(inp,cmd_args);
 //        int out_file = open(cmd_args[1],O_WRONLY | O_APPEND);
         int in_file = open(f,O_RDONLY );
-        printf("CMD: %s\n",cmd_args[0]);
+//        printf("CMD: %s\n",cmd_args[0]);
         cmd_args[1] = NULL;
         dup2(in_file,0);
         split_space(cmd_args[0],cmd_args);
@@ -201,13 +186,13 @@ void execute(char *inp, char** cmd_args){
         close(in_file);
         dup2(std_copy,0);
     }else if(great(inp)) {
-        printf("In Great\n");
+//        printf("In Great\n");
         char* f;
         int std_copy = dup(1);
         f = split_great(inp,cmd_args);
 //        int out_file = open(cmd_args[1],O_WRONLY | O_APPEND);
         int out_file = open(f,O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
-        printf("CMD: %s\n",cmd_args[0]);
+//        printf("CMD: %s\n",cmd_args[0]);
         cmd_args[1] = NULL;
         dup2(out_file,1);
         split_space(cmd_args[0],cmd_args);
@@ -215,9 +200,17 @@ void execute(char *inp, char** cmd_args){
         close(out_file);
         dup2(std_copy,1);
     }else{
-        split_space(inp,cmd_args);
-        exec_(cmd_args);
+        split_space(inp, cmd_args);
+        if(strcmp(cmd_args[0],"cd") == 0){
+            printf("for cd\n");
+            if(cd(cmd_args[1]) < 0){
+                printf("Shell: Incorrect command\n");
+            }
+        }else {
 //        printf("entered...");
+            exec_(cmd_args);
+        }
+
     }
 }
 int main(int argc, char const *argv[]) {
@@ -245,8 +238,8 @@ int main(int argc, char const *argv[]) {
             printf("Exiting.....");
             break;
         }
-        printf("%d-",flag);
-        flag++;
+//        printf("%d-",flag);
+//        flag++;
     }
     return 0;
 }
